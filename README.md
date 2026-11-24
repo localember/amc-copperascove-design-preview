@@ -11,4 +11,5 @@ Pattern site for Grok Build to finish the other AMC location sites.
 - Service and condition pages use the Local Ember catalog (tools/bd-generator/catalog); pages with no catalog file use new draft content (catalog JSON drafts in the AMC Drive folder for Grok Build)
 - Blog: 2 posts rewritten as the pattern; 26 placeholders at their exact URLs queued for Grok Build
 - Legal pages are the Local Ember standards from the AMC main preview, at the live site's slugs
+- Review layer: assets/review-comments.js adds a Local Ember reviewer toolbar (click-to-comment, stored in the Preview comments sheet). It is not part of the site design and must not ship to the live site.
 - Not the live site. Not sent to the client.
