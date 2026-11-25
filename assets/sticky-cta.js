@@ -1,13 +1,13 @@
 (function(){
   var bar=document.getElementById('scta');
-  var hero=document.querySelector('main > section.hero, main > section.phero');
+  /* threshold: the hero; on pages without one, the first section (capped at one screen for very long legal pages) */
+  var hero=document.querySelector('main > section.hero, main > section.phero')||document.querySelector('main > section')||document.querySelector('main');
   if(!bar||!hero) return;
   document.body.classList.add('has-scta');
-  function set(on){bar.classList.toggle('on',on);document.body.classList.toggle('scta-on',on);}
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){var e=es[es.length-1];set(!e.isIntersecting&&e.boundingClientRect.top<0);}).observe(hero);
-  }else{
-    var chk=function(){set(hero.getBoundingClientRect().bottom<0);};
-    window.addEventListener('scroll',chk,{passive:true});chk();
-  }
+  var cur=null;
+  function set(on){if(on===cur)return;cur=on;bar.classList.toggle('on',on);document.body.classList.toggle('scta-on',on);}
+  function chk(){var r=hero.getBoundingClientRect();set(Math.min(r.bottom,r.top+window.innerHeight)<0);}
+  window.addEventListener('scroll',chk,{passive:true});
+  window.addEventListener('resize',chk);
+  chk();
 })();
