@@ -395,3 +395,13 @@ footer .logo-w{width:240px;margin-bottom:18px}
 .postlist .new{display:inline-block;margin-left:8px;font:800 11px var(--head);letter-spacing:1.2px;text-transform:uppercase;background:var(--green);color:#fff;border-radius:999px;padding:3px 9px;vertical-align:middle}
 @media (max-width:1060px){.phero.split .wrap{grid-template-columns:1fr;gap:28px}.phero .ph-img{max-width:640px}}
 @media (max-width:760px){.mini-team{grid-template-columns:1fr}.band.tight{padding:40px 0}}
+
+/* Button hover feedback (preview comment Cmwwdl618, 2026-11-25) */
+.btn{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,color .18s ease,border-color .18s ease}
+.btn:not(:disabled):not([aria-disabled=true]):hover,.btn:not(:disabled):not([aria-disabled=true]):focus-visible{transform:translateY(-2px);box-shadow:0 12px 24px -12px rgba(34,31,32,.6)}
+.btn:not(:disabled):not([aria-disabled=true]):active{transform:translateY(0);box-shadow:0 4px 10px -6px rgba(34,31,32,.6)}
+.btn-primary:not(:disabled):not([aria-disabled=true]):hover,.btn-primary:not(:disabled):not([aria-disabled=true]):focus-visible{background:#e07d0e}
+.btn-ghost:not(:disabled):not([aria-disabled=true]):hover,.btn-ghost:not(:disabled):not([aria-disabled=true]):focus-visible{background:#fff;border-color:#fff;color:var(--ink)}
+.btn-dark:not(:disabled):not([aria-disabled=true]):hover,.btn-dark:not(:disabled):not([aria-disabled=true]):focus-visible{background:var(--purple)}
+@media (prefers-reduced-motion:reduce){.btn{transition:background-color .18s ease,color .18s ease,border-color .18s ease}.btn:hover,.btn:focus-visible,.btn:active{transform:none}}
+
