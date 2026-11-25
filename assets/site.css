@@ -36,7 +36,7 @@ p{margin:0 0 1em}
 .util .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
 .util b{color:var(--green)}
 .util a{text-decoration:none;font-weight:700}
-.hdr{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:37px;z-index:50}
+.hdr{background:#fff;border-bottom:1px solid var(--line);position:relative;z-index:50}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
 .hdr .logo img{height:44px;width:auto}
 .nav{display:flex;gap:26px;font-family:var(--head);font-weight:700;font-size:15px}
@@ -188,7 +188,6 @@ footer .logo-w{width:240px;margin-bottom:18px}
   .wrap{padding:0 18px}
   .util .wrap{justify-content:center;text-align:center;font-size:13px}
   .util .u-right{display:none}
-  .hdr{top:52px}
   .hdr .wrap{height:66px}
   .hdr .logo img{height:auto;width:210px}
   .hdr .btn{display:none}
@@ -440,3 +439,19 @@ footer .logo-w{width:240px;margin-bottom:18px}
   .hdr.open .burger span:after{transform:rotate(-45deg)}
 }
 @media (max-width:760px){.hdr.open .nav{padding:6px 18px 18px;max-height:calc(100vh - 170px)}}
+
+/* sticky CTA bar: shows after the visitor scrolls past the hero (row AMC-2026-11-25-cc-sticky-cta) */
+.scta{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(34,31,32,.97);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -10px 30px rgba(34,31,32,.25);padding:12px 0 calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(110%);visibility:hidden;transition:transform .35s ease,visibility 0s linear .35s}
+.scta.on{transform:none;visibility:visible;transition:transform .35s ease,visibility 0s}
+.scta .wrap{display:flex;justify-content:center;gap:14px}
+.scta .btn{padding:13px 26px}
+body.has-scta footer .wrap{padding-bottom:calc(30px + 80px + env(safe-area-inset-bottom,0px))}
+body.scta-on{--le-rv-lift:80px}
+@media (max-width:760px){
+  .scta{padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px))}
+  .scta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px}
+  .scta .btn{min-height:52px;padding:8px 10px;font-size:15px;white-space:normal;text-align:center;line-height:1.2}
+  body.has-scta footer .wrap{padding-bottom:calc(30px + 76px + env(safe-area-inset-bottom,0px))}
+  body.scta-on{--le-rv-lift:76px}
+}
+@media (prefers-reduced-motion:reduce){.scta,.scta.on{transform:none;transition:none}}
