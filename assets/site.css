@@ -405,3 +405,38 @@ footer .logo-w{width:240px;margin-bottom:18px}
 .btn-dark:not(:disabled):not([aria-disabled=true]):hover,.btn-dark:not(:disabled):not([aria-disabled=true]):focus-visible{background:var(--purple)}
 @media (prefers-reduced-motion:reduce){.btn{transition:background-color .18s ease,color .18s ease,border-color .18s ease}.btn:hover,.btn:focus-visible,.btn:active{transform:none}}
 
+
+/* main menu: matches the live Copperas Cove menu minus Home (row AMC-2026-11-25-cc-menu) */
+.nav{align-items:center}
+.nd{position:relative}
+.nd-t{appearance:none;background:none;border:0;margin:0;padding:10px 0;font:inherit;color:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.nd-t:after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.nd-t:hover,.nd.open>.nd-t{color:var(--blue)}
+.nd-m{display:none;position:absolute;top:100%;left:-14px;z-index:70;min-width:250px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px rgba(34,31,32,.16);font-weight:600;font-size:14.5px;white-space:nowrap}
+.nd-wide{left:50%;transform:translateX(-50%);gap:18px}
+.nd-g{display:flex;flex-direction:column;gap:1px;min-width:190px}
+.nd-m a{padding:7px 10px;border-radius:8px;text-decoration:none}
+.nd-m a:hover,.nd-m a:focus-visible{background:var(--frost);color:var(--blue)}
+.nd-m a.nd-p{font-weight:800}
+.nd-m a.nd-sub{padding-left:24px;font-weight:500}
+.nd-h{padding:7px 10px 4px;font-family:var(--head);font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--purple)}
+.nd.open>.nd-m{display:flex;flex-direction:column}
+.nd.open>.nd-wide{flex-direction:row}
+.nd.open>.nd-t:after{transform:translateY(1px) rotate(225deg)}
+@media (min-width:1061px){
+  .nd:hover>.nd-m,.nd:focus-within>.nd-m{display:flex;flex-direction:column}
+  .nd:hover>.nd-wide,.nd:focus-within>.nd-wide{flex-direction:row}
+}
+@media (max-width:1060px){
+  .hdr.open .nav{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:100%;left:0;right:0;max-height:calc(100vh - 150px);overflow:auto;padding:6px 24px 18px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(34,31,32,.12);white-space:normal;font-size:16px}
+  .hdr.open .nav>a,.hdr.open .nd-t{display:flex;width:100%;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+  .nd-m,.nd-wide{position:static;transform:none;min-width:0;box-shadow:none;border:0;border-radius:0;padding:6px 0 10px 8px;white-space:normal}
+  .nd.open>.nd-wide{flex-direction:column;gap:6px}
+  .nd-g{min-width:0}
+  .nd-m a{padding:10px}
+  .burger{cursor:pointer}
+  .hdr.open .burger span{background:transparent;box-shadow:none;position:relative}
+  .hdr.open .burger span:before,.hdr.open .burger span:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);transform:rotate(45deg)}
+  .hdr.open .burger span:after{transform:rotate(-45deg)}
+}
+@media (max-width:760px){.hdr.open .nav{padding:6px 18px 18px;max-height:calc(100vh - 170px)}}

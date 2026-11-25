@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/nav.js" defer></script>
 </head>
 <body>
 <div class="preview" role="status">Design preview, not live &middot; Forms are off &middot; Not for public use</div>
@@ -23,11 +24,9 @@
 
 <header class="hdr"><div class="wrap">
   <a class="logo" href="../" aria-label="Anthony Medical &amp; Chiropractic Center home"><img src="../assets/img/logo.svg" alt="Anthony Medical &amp; Chiropractic Center" width="465" height="60"></a>
-  <nav class="nav" aria-label="Main">
-    <a href="../special/">New Patient Specials</a><a href="../#services">Services</a><a href="../#conditions">Conditions</a><a href="../us/">Our Team</a><a href="../what-to-expect/">New Patients</a><a href="../contact-us/">Contact</a>
-  </nav>
+  <nav class="nav" id="site-nav" aria-label="Main"><div class="nd"><button type="button" class="nd-t" aria-expanded="false" aria-controls="nd-0">About</button><div class="nd-m" id="nd-0"><div class="nd-g"><a href="../us/">Meet the Team</a><a href="../chris-price/">Meet The Owners</a><a href="../testimonials/">Testimonials</a><a href="../office-tour/">Office Tour</a><a href="../review-us/">Review Us</a><a href="../blog/">Blog</a></div></div></div><div class="nd"><button type="button" class="nd-t" aria-expanded="false" aria-controls="nd-1">Patients</button><div class="nd-m" id="nd-1"><div class="nd-g"><a href="../faq-about-chiropractor-copperas-cove-tx/">Frequently Asked Questions</a><a href="../insurance/">Insurance Information</a><a href="../medical-record-request-form/">Medical Record Request Form</a></div></div></div><div class="nd"><button type="button" class="nd-t" aria-expanded="false" aria-controls="nd-2">Services</button><div class="nd-m nd-wide" id="nd-2"><div class="nd-g"><span class="nd-h">Chiropractic Care</span><a href="../chiropractic-necessary/">General Chiropractic Care</a><a href="../chiropractic-care-kids/">Kids Chiropractic Care</a><a href="../pregnancy/">Prenatal Chiropractic Care</a></div><div class="nd-g"><a class="nd-p" href="../corrective-therapy-copperas-cove-tx/">Corrective Therapy</a><a href="../kinesio-taping/">Kinesio Taping</a><a href="../management-of-pain/">Management of Pain</a><a href="../sports-injury/">Sports Injury</a></div><div class="nd-g"><a class="nd-p" href="https://www.anthonymassage.com/">Massage Therapy</a><a class="nd-p" href="../pain-management/">Pain Management</a><a class="nd-p" href="../wellness-care/">Wellness Care</a></div></div></div><div class="nd"><button type="button" class="nd-t" aria-expanded="false" aria-controls="nd-3">Conditions</button><div class="nd-m nd-wide" id="nd-3"><div class="nd-g"><span class="nd-h">Spine Related</span><a href="../back-pain/">Back Pain</a><a class="nd-sub" href="../low-back-pain/">Low Back Pain</a><a href="../headaches-migraines/">Headaches &amp; Migraines</a><a href="../neck-pain/">Neck Pain</a><a href="../sciatica/">Sciatica</a><a href="../scoliosis/">Scoliosis</a></div><div class="nd-g"><span class="nd-h">Injuries</span><a href="../car-accident/">Car Accident</a><a href="../disc-injury/">Disc Injury</a><a href="../whiplash/">Whiplash</a><a href="../work-injury/">Work Injury</a></div><div class="nd-g"><span class="nd-h">Extremities</span><a href="../arm-leg-pain/">Arm and Leg Pain</a><a href="../carpal-tunnel/">Carpal Tunnel</a><a href="../knee-pain/">Knee Pain</a><a href="../shoulder-pain/">Shoulder Pain</a></div><div class="nd-g"><span class="nd-h">Other Conditions</span><a href="../vertigo/">Vertigo</a></div></div></div><a href="../referral/">Referral</a><a href="../contact-us/">Contact</a><a href="https://www.anthonychiro.com/locations/">Locations</a></nav>
   <a class="btn btn-primary" href="tel:2542067131">Call (254) 206-7131</a>
-  <button class="burger" type="button" aria-label="Menu (preview only)" disabled><span></span></button>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
 </div></header>
 <div class="stripe" aria-hidden="true"></div>
 <main id="top">
