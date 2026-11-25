@@ -369,7 +369,7 @@ footer .logo-w{width:240px;margin-bottom:18px}
 @media (max-width:760px){.hero .hero-sub{font-size:18px}.g-rating .g-num{font-size:36px}.g-rating .g-stars{font-size:20px}.map-embed iframe{height:320px}.ghl-slot{padding:14px}}
 /* round 4: John's comments (H1 in the old eyebrow format; sentence in the old hero header format; map in the address card spot) */
 .hero h1.eyebrow{font-size:13px;font-weight:800;letter-spacing:2.5px;line-height:inherit;max-width:none;margin:0 0 12px}
-.hero .hero-title{font-family:var(--head);line-height:1.15;margin:0 0 .5em;font-size:clamp(36px,5.4vw,64px);font-weight:800;max-width:720px;letter-spacing:-.02em}
+.hero .hero-title{font-family:var(--head);line-height:1.15;margin:0 0 .5em;font-size:clamp(18px,2.7vw,32px);font-weight:800;max-width:720px;letter-spacing:-.02em}
 .hero .hero-title em{font-style:normal;color:var(--green)}
 .visit .grid .map-embed{margin-top:0}
 .visit .grid .map-embed iframe{height:100%;min-height:320px}
